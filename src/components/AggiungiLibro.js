@@ -16,7 +16,7 @@
     const handleAggiungiLibro = async () => {
       try {
         // Effettua la richiesta POST all'API per aggiungere il libro
-        const response = await axios.post("http://localhost:5000/libri", {
+        const response = await axios.post("https://unirent-api.onrender.com/libri", {
           titolo,
           autore,
           corso_di_studio,

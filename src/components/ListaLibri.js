@@ -12,7 +12,7 @@ const ListaLibri = () => {
 
   const fetchLibri = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/libri");
+      const response = await axios.get("https://unirent-api.onrender.com/libri");
       setLibri(response.data.data);
     } catch (error) {
       console.error("Errore durante il recupero dei libri:", error.message);
@@ -27,7 +27,7 @@ const ListaLibri = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/libri/${id}`);
+      await axios.delete(`https://unirent-api.onrender.com/libri/${id}`);
       fetchLibri(); // Ricarica la lista dei libri dopo l'eliminazione
     } catch (error) {
       console.error("Errore durante l'eliminazione del libro:", error.message);

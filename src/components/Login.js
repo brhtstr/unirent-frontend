@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/users/login", { email, password });
+      const response = await axios.post("https://unirent-api.onrender.com/users/login", { email, password });
       setMessage(response.data.message);
       setIsError(false); // Resetta lo stato dell'errore
 

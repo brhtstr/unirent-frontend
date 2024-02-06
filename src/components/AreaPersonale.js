@@ -10,7 +10,7 @@ const AreaPersonale = () => {
   const [isError, setIsError] = useState(false);
 
   const handleLogout = () => {
-    axios.get("http://localhost:5000/users/logout")
+    axios.get("https://unirent-api.onrender.com/users/logout")
       .then(() => {
         setMessage("Logout effettuato");
         setIsError(false);
